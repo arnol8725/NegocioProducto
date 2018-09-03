@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A67BA6E2-C1F9-4280-B568-841C672AA6CE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Elekta.Negocio.SistnformacionEpos</RootNamespace>
+    <AssemblyName>Elekta.Negocio.SistnformacionEpos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Elektra.Negocio.Entidades.Abstracto">
+      <HintPath>..\..\..\..\..\..\..\aperaltap_Mex_sview\TIENDA\Elektra\EnsambladosVersionados\Entidades\Elektra.Negocio.Entidades.Abstracto.dll</HintPath>
+    </Reference>
+    <Reference Include="Elektra.Negocio.Entidades.Milenia, Version=1.0.0.1, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\aperaltap_Mex_sview\TIENDA\Elektra\EnsambladosVersionados\Entidades\Elektra.Negocio.Entidades.Milenia.dll</HintPath>
+    </Reference>
+    <Reference Include="Elektra.Negocio.Entidades.MileniaPostVenta">
+      <HintPath>..\..\..\..\..\..\..\aperaltap_Mex_sview\TIENDA\Elektra\EnsambladosVersionados\Entidades\Elektra.Negocio.Entidades.MileniaPostVenta.dll</HintPath>
+    </Reference>
+    <Reference Include="Elektra.Negocio.Entidades.Producto">
+      <HintPath>..\..\..\..\..\..\..\aperaltap_Mex_sview\TIENDA\Elektra\EnsambladosVersionados\Entidades\Elektra.Negocio.Entidades.Producto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Elektra.Negocio.Entidades.SistemasInformacion">
+      <HintPath>..\..\..\..\..\..\..\aperaltap_Mex_sview\TIENDA\Elektra\EnsambladosVersionados\Entidades\Elektra.Negocio.Entidades.SistemasInformacion.dll</HintPath>
+    </Reference>
+    <Reference Include="Elektra.Negocio.Entidades.Tienda">
+      <HintPath>..\..\..\..\..\..\..\aperaltap_Mex_sview\TIENDA\Elektra\EnsambladosVersionados\Entidades\Elektra.Negocio.Entidades.Tienda.dll</HintPath>
+    </Reference>
+    <Reference Include="Elektra.Negocio.Entidades.Ventas">
+      <HintPath>..\..\..\..\..\..\..\aperaltap_Mex_sview\TIENDA\Elektra\EnsambladosVersionados\Entidades\Elektra.Negocio.Entidades.Ventas.dll</HintPath>
+    </Reference>
+    <Reference Include="Elektra.Negocio.EntregaDomicilio">
+      <HintPath>..\..\..\..\..\..\..\aperaltap_Mex_sview\TIENDA\Elektra\EnsambladosVersionados\Negocio\Elektra.Negocio.EntregaDomicilio.dll</HintPath>
+    </Reference>
+    <Reference Include="Elektra.Services.DataAccess">
+      <HintPath>..\..\..\..\..\..\..\aperaltap_Mex_sview\TIENDA\Elektra\EnsambladosVersionados\Servicios\BaseDatos\Elektra.Services.DataAccess.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.ConfigurationManagement">
+      <HintPath>..\..\..\..\..\..\..\aperaltap_Mex_sview\TIENDA\Elektra\EnsambladosVersionados\Servicios\Configuracion\Microsoft.ApplicationBlocks.ConfigurationManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ManejadorSistemasInformacion.cs" />
+    <Compile Include="model\DetalleBusqueda.cs" />
+    <Compile Include="model\DetalleMovimiento.cs" />
+    <Compile Include="model\DetalleProducto.cs" />
+    <Compile Include="model\DetalleProductoxSKU.cs" />
+    <Compile Include="model\ExistenciaInventario.cs" />
+    <Compile Include="model\ListaDocumentosCartaXSLT.cs" />
+    <Compile Include="model\Respuesta.cs" />
+    <Compile Include="model\skuTipoGarantia.cs" />
+    <Compile Include="model\VentaGeneral.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
